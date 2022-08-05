@@ -1,0 +1,669 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Verbs</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="ffe5f82e-ae1b-4944-b6e2-6a70ac0e0290" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1555993539-1732b0258235?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb" style="object-position:center 50%"/><h1 class="page-title">Verbs</h1></header><div class="page-body"><h2 id="de409290-c55b-42d8-a4c6-b6f49c388429" class="block-color-blue">Verb conjugations</h2><table id="5861ee61-f11b-412f-9d13-c074ee9c380e" class="simple-table"><thead class="simple-table-header"><tr id="a233ccc8-31b0-4849-8700-6c89de9605da"><th id="GItd" class="simple-table-header-color simple-table-header"></th><th id="LOov" class="simple-table-header-color simple-table-header">Ending</th><th id="ix}i" class="simple-table-header-color simple-table-header" style="width:186px">Example</th></tr></thead><tbody><tr id="8b6a1d6c-3e9a-4f73-9cf5-addf6734fe1e"><th id="GItd" class="simple-table-header-color simple-table-header">1st</th><td id="LOov" class="">-o, -are</td><td id="ix}i" class="" style="width:186px">voco, vocare (to call)</td></tr><tr id="5566439a-d070-4844-956d-ef3045222f6e"><th id="GItd" class="simple-table-header-color simple-table-header">2nd</th><td id="LOov" class="">-eo, -ēre</td><td id="ix}i" class="" style="width:186px">teneo, tenēre (to hold)</td></tr><tr id="43dec484-3f9c-406b-8200-17fb7d9fed0a"><th id="GItd" class="simple-table-header-color simple-table-header">3rd</th><td id="LOov" class="">-o, -ere</td><td id="ix}i" class="" style="width:186px">scribo, scribere (to write)</td></tr><tr id="14569e04-5263-4354-b5f1-3e8dde7dfa55"><th id="GItd" class="simple-table-header-color simple-table-header">3rd io</th><td id="LOov" class="">-io, -ere</td><td id="ix}i" class="" style="width:186px">facio, facere (to make)</td></tr><tr id="6128a616-9f58-4ebb-9d81-6c81b6f7a45c"><th id="GItd" class="simple-table-header-color simple-table-header">4th</th><td id="LOov" class="">-io, -ire</td><td id="ix}i" class="" style="width:186px">sentio, sentire (to feel)</td></tr></tbody></table><h2 id="59adb998-f41d-4385-9fb9-db58aa8a7904" class="block-color-blue">Verb endings</h2><h3 id="d0b53776-68ec-4ca8-aecc-7aed2e3737c2" class="block-color-pink">Active Indicative</h3><table id="2ea34afc-1f97-44fb-a921-cc756fcedf30" class="simple-table"><thead class="simple-table-header"><tr id="91e37b0c-2178-40ab-a441-87882f15143b"><th id="&lt;[?K" class="simple-table-header-color simple-table-header"></th><th id="&lt;bS~" class="simple-table-header-color simple-table-header">Present indicative (1, 2)</th><th id="]Vsw" class="simple-table-header-color simple-table-header" style="width:133px">Present indicative (3, 3io, 4)</th><th id="{cpq" class="simple-table-header-color simple-table-header">Imperfect indicative</th><th id="|U=h" class="simple-table-header-color simple-table-header">Future indicative (1, 2)</th><th id="[duv" class="simple-table-header-color simple-table-header" style="width:132px">Future indicative (3, 3io, 4)</th><th id="A~SC" class="simple-table-header-color simple-table-header">Perfect indicative</th><th id="MddM" class="simple-table-header-color simple-table-header">Pluperfect indicative</th><th id="~VCr" class="simple-table-header-color simple-table-header">Future perfect indicative</th></tr></thead><tbody><tr id="e98f2378-d031-4f63-a911-92a50ca9ee37"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">Translated as...</th><td id="&lt;bS~" class="">I verb</td><td id="]Vsw" class="" style="width:133px">I verb</td><td id="{cpq" class="">I was verbing</td><td id="|U=h" class="">I will verb</td><td id="[duv" class="" style="width:132px">I will verb</td><td id="A~SC" class="">I verbed</td><td id="MddM" class="">I had verbed</td><td id="~VCr" class="">I will have verbed</td></tr><tr id="e6ea5032-7907-445a-8078-5b3f845fb408"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">I</th><td id="&lt;bS~" class="">o</td><td id="]Vsw" class="" style="width:133px">o</td><td id="{cpq" class="">bam</td><td id="|U=h" class="">bo</td><td id="[duv" class="" style="width:132px">am</td><td id="A~SC" class="">i</td><td id="MddM" class="">eram</td><td id="~VCr" class="">ero</td></tr><tr id="04e4c27d-3d97-4837-a25c-30d78dad6eea"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">You</th><td id="&lt;bS~" class="">s</td><td id="]Vsw" class="" style="width:133px">is</td><td id="{cpq" class="">bas</td><td id="|U=h" class="">bis</td><td id="[duv" class="" style="width:132px">es</td><td id="A~SC" class="">isti</td><td id="MddM" class="">eras</td><td id="~VCr" class="">eris</td></tr><tr id="77774b1e-254a-44c2-998a-d449cd76afcb"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">He/she/it</th><td id="&lt;bS~" class="">t</td><td id="]Vsw" class="" style="width:133px">it</td><td id="{cpq" class="">bat</td><td id="|U=h" class="">bit</td><td id="[duv" class="" style="width:132px">et</td><td id="A~SC" class="">it</td><td id="MddM" class="">erat</td><td id="~VCr" class="">erit</td></tr><tr id="38e31517-d9d6-4ee8-883f-459ae2d9907b"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">We</th><td id="&lt;bS~" class="">mus</td><td id="]Vsw" class="" style="width:133px">imus</td><td id="{cpq" class="">bamus</td><td id="|U=h" class="">bimus</td><td id="[duv" class="" style="width:132px">emus</td><td id="A~SC" class="">imus</td><td id="MddM" class="">eramus</td><td id="~VCr" class="">erimus</td></tr><tr id="0ac8d2ae-63e6-463a-b3fc-f2347b7eaf83"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">You all</th><td id="&lt;bS~" class="">tis</td><td id="]Vsw" class="" style="width:133px">itis</td><td id="{cpq" class="">batis</td><td id="|U=h" class="">bitis</td><td id="[duv" class="" style="width:132px">etis</td><td id="A~SC" class="">istis</td><td id="MddM" class="">eratis</td><td id="~VCr" class="">eritis</td></tr><tr id="3de9393d-7e75-4d7d-982e-fea4bc027eba"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">They</th><td id="&lt;bS~" class="">nt</td><td id="]Vsw" class="" style="width:133px">unt</td><td id="{cpq" class="">bant</td><td id="|U=h" class="">bunt</td><td id="[duv" class="" style="width:132px">ent</td><td id="A~SC" class="">erunt</td><td id="MddM" class="">erant</td><td id="~VCr" class="">erint</td></tr></tbody></table><h3 id="cf53d200-6301-4ea6-b041-391b9f34ead9" class=""><mark class="highlight-pink">Passive Indicative</mark></h3><table id="cbd1b4bb-ad44-46b9-bcbc-02fe394fd007" class="simple-table"><thead class="simple-table-header"><tr id="148a019c-a569-43a3-ab6f-f380f81aba76"><th id="&lt;[?K" class="simple-table-header-color simple-table-header"></th><th id="&lt;bS~" class="simple-table-header-color simple-table-header">Present indicative (1, 2)</th><th id="]Vsw" class="simple-table-header-color simple-table-header" style="width:133px">Present indicative (3, 3io, 4)</th><th id="{cpq" class="simple-table-header-color simple-table-header">Imperfect indicative</th><th id="|U=h" class="simple-table-header-color simple-table-header">Future indicative (1, 2)</th><th id="[duv" class="simple-table-header-color simple-table-header" style="width:132px">Future indicative (3, 3io, 4)</th><th id="A~SC" class="simple-table-header-color simple-table-header">Perfect indicative</th><th id="MddM" class="simple-table-header-color simple-table-header" style="width:138px">Pluperfect indicative</th><th id="~VCr" class="simple-table-header-color simple-table-header" style="width:165px">Future perfect indicative</th></tr></thead><tbody><tr id="cf73b760-647a-47ac-9951-68c761c29417"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">Translated as...</th><td id="&lt;bS~" class="">I am verbed</td><td id="]Vsw" class="" style="width:133px">I am verbed</td><td id="{cpq" class="">I was being verbed</td><td id="|U=h" class="">I will be verbed</td><td id="[duv" class="" style="width:132px">I will be verbed</td><td id="A~SC" class="">I was verbed</td><td id="MddM" class="" style="width:138px">I had been verbed</td><td id="~VCr" class="" style="width:165px">I will have been verbed</td></tr><tr id="0703bf62-4d9b-4e86-936f-33e26325e45c"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">I</th><td id="&lt;bS~" class="">r</td><td id="]Vsw" class="" style="width:133px">or</td><td id="{cpq" class="">bar</td><td id="|U=h" class="">bor</td><td id="[duv" class="" style="width:132px">ar</td><td id="A~SC" class="">4th + sum</td><td id="MddM" class="" style="width:138px">4th + eram</td><td id="~VCr" class="" style="width:165px">4th + ero</td></tr><tr id="22aadeb9-8925-43b2-b304-ae235751301f"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">You</th><td id="&lt;bS~" class="">ris</td><td id="]Vsw" class="" style="width:133px">eris</td><td id="{cpq" class="">baris</td><td id="|U=h" class="">beris</td><td id="[duv" class="" style="width:132px">eris</td><td id="A~SC" class="">es</td><td id="MddM" class="" style="width:138px">eras</td><td id="~VCr" class="" style="width:165px">eris</td></tr><tr id="e03a07b1-02c3-48fa-a7f8-571bfd2de75a"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">He/she/it</th><td id="&lt;bS~" class="">tur</td><td id="]Vsw" class="" style="width:133px">itur</td><td id="{cpq" class="">batur</td><td id="|U=h" class="">bitur</td><td id="[duv" class="" style="width:132px">etur</td><td id="A~SC" class="">est</td><td id="MddM" class="" style="width:138px">erat</td><td id="~VCr" class="" style="width:165px">erit</td></tr><tr id="be12f916-6f5f-4b32-82e5-d7e0471398ed"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">We</th><td id="&lt;bS~" class="">mur</td><td id="]Vsw" class="" style="width:133px">imur</td><td id="{cpq" class="">bamur</td><td id="|U=h" class="">bimur</td><td id="[duv" class="" style="width:132px">emur</td><td id="A~SC" class="">sumus</td><td id="MddM" class="" style="width:138px">eramus</td><td id="~VCr" class="" style="width:165px">erimus</td></tr><tr id="01f5822f-d35b-46a3-9636-900c73a2be8f"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">You all</th><td id="&lt;bS~" class="">mini</td><td id="]Vsw" class="" style="width:133px">imini</td><td id="{cpq" class="">bamini</td><td id="|U=h" class="">bimini</td><td id="[duv" class="" style="width:132px">emini</td><td id="A~SC" class="">estis</td><td id="MddM" class="" style="width:138px">eratis</td><td id="~VCr" class="" style="width:165px">eritis</td></tr><tr id="792ab058-2fa7-4252-a697-cb9a700ed02b"><th id="&lt;[?K" class="simple-table-header-color simple-table-header">They</th><td id="&lt;bS~" class="">ntur</td><td id="]Vsw" class="" style="width:133px">untur</td><td id="{cpq" class="">bantur</td><td id="|U=h" class="">buntur</td><td id="[duv" class="" style="width:132px">entur</td><td id="A~SC" class="">sunt</td><td id="MddM" class="" style="width:138px">erant</td><td id="~VCr" class="" style="width:165px">erunt</td></tr></tbody></table><h3 id="c486e693-a48d-4ef9-9ddf-5d45a024badb" class="block-color-pink"><mark class="highlight-pink">Some irregular verbs</mark></h3><p id="d6577bd6-c4a1-43ca-bab9-7ed330e4511f" class="block-color-purple">Present tense</p><table id="40f31aa9-c7f8-4c25-98a7-b58a54e2f921" class="simple-table"><thead class="simple-table-header"><tr id="52cc83f4-92c9-4b6d-ba2b-60574381cd92"><th id="GItd" class="simple-table-header-color simple-table-header"></th><th id="LOov" class="simple-table-header-color simple-table-header">I am</th><th id="ix}i" class="simple-table-header-color simple-table-header">I am able</th><th id="xq?Z" class="simple-table-header-color simple-table-header">I want</th><th id="`?A\" class="simple-table-header-color simple-table-header">I don’t want</th><th id="xTXm" class="simple-table-header-color simple-table-header">I bring</th></tr></thead><tbody><tr id="ffd08c8b-cfcf-407a-b4ba-ad40a4b3fff8"><th id="GItd" class="simple-table-header-color simple-table-header">I</th><td id="LOov" class="">sum</td><td id="ix}i" class="">possum</td><td id="xq?Z" class="">volō</td><td id="`?A\" class="">nolō</td><td id="xTXm" class="">ferō</td></tr><tr id="8248da3f-27c2-4a4f-9a26-dcdcf196ba91"><th id="GItd" class="simple-table-header-color simple-table-header">You</th><td id="LOov" class="">es</td><td id="ix}i" class="">potes</td><td id="xq?Z" class="">vīs</td><td id="`?A\" class="">non vīs</td><td id="xTXm" class="">fers</td></tr><tr id="5a498a69-76a1-4e34-a2c5-824fde06455c"><th id="GItd" class="simple-table-header-color simple-table-header">He/she/it</th><td id="LOov" class="">est</td><td id="ix}i" class="">potest</td><td id="xq?Z" class="">vult</td><td id="`?A\" class="">non vult</td><td id="xTXm" class="">fert</td></tr><tr id="2b3d395d-c241-46e8-9903-e7bba2696271"><th id="GItd" class="simple-table-header-color simple-table-header">We</th><td id="LOov" class="">sumus</td><td id="ix}i" class="">possumus</td><td id="xq?Z" class="">volumus</td><td id="`?A\" class="">nolumus</td><td id="xTXm" class="">ferimus</td></tr><tr id="e257ff61-c55a-4690-8b26-9559930a5413"><th id="GItd" class="simple-table-header-color simple-table-header">You all</th><td id="LOov" class="">estis</td><td id="ix}i" class="">potestis</td><td id="xq?Z" class="">vultis</td><td id="`?A\" class="">non vultis</td><td id="xTXm" class="">fertis</td></tr><tr id="2c802062-1b47-4fcb-9cb0-4cc9c569053c"><th id="GItd" class="simple-table-header-color simple-table-header">They</th><td id="LOov" class="">sunt</td><td id="ix}i" class="">possunt</td><td id="xq?Z" class="">volunt</td><td id="`?A\" class="">nolunt</td><td id="xTXm" class="">ferunt</td></tr></tbody></table><p id="5c31007b-b250-4593-8339-e7268e2e278d" class="block-color-purple">Imperfect tense</p><table id="6a65c8a4-2c40-4b69-b5be-bc3e7a0db6ef" class="simple-table"><thead class="simple-table-header"><tr id="e767b72b-f4cc-4c49-951b-d6a2cd357f1b"><th id="GItd" class="simple-table-header-color simple-table-header"></th><th id="LOov" class="simple-table-header-color simple-table-header">I am</th><th id="ix}i" class="simple-table-header-color simple-table-header">I am able</th><th id="xq?Z" class="simple-table-header-color simple-table-header">I want</th><th id="xTXm" class="simple-table-header-color simple-table-header">I bring</th></tr></thead><tbody><tr id="5a282306-505a-4d48-816a-d6b503916bcc"><th id="GItd" class="simple-table-header-color simple-table-header">I</th><td id="LOov" class="">eram</td><td id="ix}i" class="">poteram</td><td id="xq?Z" class="">volēbam</td><td id="xTXm" class="">ferēbam</td></tr><tr id="1dad23aa-57e2-46db-8e07-ea113bcbf2d3"><th id="GItd" class="simple-table-header-color simple-table-header">You</th><td id="LOov" class="">erās</td><td id="ix}i" class="">poterās</td><td id="xq?Z" class="">volēbās</td><td id="xTXm" class="">ferēbās</td></tr><tr id="e0d9fd22-c19b-4781-8b29-6bcfc8460a98"><th id="GItd" class="simple-table-header-color simple-table-header">He/she/it</th><td id="LOov" class="">erat</td><td id="ix}i" class="">poterat</td><td id="xq?Z" class="">volēbat</td><td id="xTXm" class="">ferēbat</td></tr><tr id="45249c61-7311-48cd-bc55-a8b6f83de2b9"><th id="GItd" class="simple-table-header-color simple-table-header">We</th><td id="LOov" class="">erāmus</td><td id="ix}i" class="">poterāmus</td><td id="xq?Z" class="">volēbāmus</td><td id="xTXm" class="">ferēbāmus</td></tr><tr id="3c646c85-2561-428f-99c8-2f28d7ece91a"><th id="GItd" class="simple-table-header-color simple-table-header">You all</th><td id="LOov" class="">erātis</td><td id="ix}i" class="">poterātis</td><td id="xq?Z" class="">volēbātis</td><td id="xTXm" class="">ferēbātis</td></tr><tr id="f405ace7-fafa-4e39-998b-23bedeb6326c"><th id="GItd" class="simple-table-header-color simple-table-header">They</th><td id="LOov" class="">erant</td><td id="ix}i" class="">poterant</td><td id="xq?Z" class="">volēbant</td><td id="xTXm" class="">ferēbant</td></tr></tbody></table><h3 id="bc9aaa10-bada-4abe-91a1-acd10a90e55e" class="block-color-pink"><mark class="highlight-pink">Verb “to be”</mark></h3><p id="ae1cebe8-6d57-4359-9d2d-78486005dd83" class="block-color-purple"><em>sum, esse, fui, tuturum</em> - to be</p><table id="238679c4-11c0-4842-8caf-39f640da1507" class="simple-table"><thead class="simple-table-header"><tr id="8d525ef4-472d-4e41-bb3c-357886c753a8"><th id="GItd" class="simple-table-header-color simple-table-header"></th><th id="LOov" class="block-color-teal_background simple-table-header">English <em>(am, is, are)</em></th><th id="ix}i" class="simple-table-header-color simple-table-header"></th><th id="xq?Z" class="block-color-teal_background simple-table-header">English <em>(was, were)</em></th><th id="`?A\" class="simple-table-header-color simple-table-header"></th><th id="xTXm" class="block-color-teal_background simple-table-header">English <em>(will be)</em></th></tr></thead><tbody><tr id="eca2c5ce-d343-463b-b73c-e6ce3d1dda09"><td id="GItd" class="">sum</td><td id="LOov" class="block-color-teal_background">I am</td><td id="ix}i" class="">eram</td><td id="xq?Z" class="block-color-teal_background">I was</td><td id="`?A\" class="">ero</td><td id="xTXm" class="block-color-teal_background">I will be</td></tr><tr id="97ec3743-1393-472e-84d4-e35f0cab6bed"><td id="GItd" class="">es</td><td id="LOov" class="block-color-teal_background">You are</td><td id="ix}i" class="">eras</td><td id="xq?Z" class="block-color-teal_background">You were</td><td id="`?A\" class="">eris</td><td id="xTXm" class="block-color-teal_background">You will be</td></tr><tr id="ca89fd03-a4a4-4fd9-9ea1-bb09655af73e"><td id="GItd" class="">est</td><td id="LOov" class="block-color-teal_background">He/she/it is</td><td id="ix}i" class="">erat</td><td id="xq?Z" class="block-color-teal_background">He/she/it was</td><td id="`?A\" class="">erit</td><td id="xTXm" class="block-color-teal_background">He/she/it will be</td></tr><tr id="657f040d-5f2d-42b6-9019-eb8a643fb716"><td id="GItd" class="">sumus</td><td id="LOov" class="block-color-teal_background">We are</td><td id="ix}i" class="">eramus</td><td id="xq?Z" class="block-color-teal_background">We were</td><td id="`?A\" class="">erimus</td><td id="xTXm" class="block-color-teal_background">We will be</td></tr><tr id="0c1f3a3b-3fc8-4f10-888e-bbefaa183e6e"><td id="GItd" class="">estis</td><td id="LOov" class="block-color-teal_background">You all are</td><td id="ix}i" class="">eratis</td><td id="xq?Z" class="block-color-teal_background">You all were</td><td id="`?A\" class=""> eritis</td><td id="xTXm" class="block-color-teal_background">You all will be</td></tr><tr id="1ce81eae-2fd2-4ac3-bba0-56ef04664c6d"><td id="GItd" class="">sunt</td><td id="LOov" class="block-color-teal_background">They are</td><td id="ix}i" class="">erant</td><td id="xq?Z" class="block-color-teal_background">They were</td><td id="`?A\" class="">erunt</td><td id="xTXm" class="block-color-teal_background">They will be</td></tr></tbody></table><h3 id="bed1d947-7b18-4df4-ab35-72583efe07ac" class="block-color-pink"><mark class="highlight-pink">Participles</mark></h3><p id="473bad88-e567-4605-8b81-0768d5dd4ffd" class="block-color-purple">Present active participle</p><table id="0cca9f0a-c9c2-4419-9f87-25b7a7d187e6" class="simple-table"><thead class="simple-table-header"><tr id="c4b3b328-5fb4-4db5-8ce3-ca89223a7b48"><th id="N?PA" class="simple-table-header-color simple-table-header"></th><th id="]hiU" class="simple-table-header-color simple-table-header">Masc/Fem</th><th id="fK^Z" class="simple-table-header-color simple-table-header">Neuter</th><th id="sVR]" class="simple-table-header-color simple-table-header">Masc/Fem (Plural)</th><th id="e`]Y" class="simple-table-header-color simple-table-header">Neuter (Plural)</th></tr></thead><tbody><tr id="87f19853-2ee2-4775-8cc5-6d35b21b9af3"><th id="N?PA" class="simple-table-header-color simple-table-header">Nom</th><td id="]hiU" class="">ns</td><td id="fK^Z" class="">ns</td><td id="sVR]" class="">ntes</td><td id="e`]Y" class="">ntia</td></tr><tr id="9b6f820f-da5c-4489-ab40-22e1713a30b5"><th id="N?PA" class="simple-table-header-color simple-table-header">Gen</th><td id="]hiU" class="">ntis</td><td id="fK^Z" class="">ntis</td><td id="sVR]" class="">ntium</td><td id="e`]Y" class="">ntium</td></tr><tr id="0a407b5f-f9a9-40d4-a28b-f5c9d9a2991e"><th id="N?PA" class="simple-table-header-color simple-table-header">Dat</th><td id="]hiU" class="">nti</td><td id="fK^Z" class="">nti</td><td id="sVR]" class="">ntibus</td><td id="e`]Y" class="">ntibus</td></tr><tr id="ff634c01-fa96-4872-ace0-a297913b9839"><th id="N?PA" class="simple-table-header-color simple-table-header">Acc</th><td id="]hiU" class="">ntem</td><td id="fK^Z" class="">ns</td><td id="sVR]" class="">ntes</td><td id="e`]Y" class="">ntia</td></tr><tr id="053833e2-e66c-4092-9397-a841ed9521fa"><th id="N?PA" class="simple-table-header-color simple-table-header">Abl</th><td id="]hiU" class="">nte/i</td><td id="fK^Z" class="">nte</td><td id="sVR]" class="">ntibus</td><td id="e`]Y" class="">ntibus</td></tr></tbody></table></div></article></body></html>

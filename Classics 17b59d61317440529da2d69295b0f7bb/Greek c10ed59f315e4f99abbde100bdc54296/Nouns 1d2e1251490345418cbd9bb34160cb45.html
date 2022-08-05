@@ -1,0 +1,670 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Nouns</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1d2e1251-4903-4541-8cbd-9bb34160cb45" class="page sans"><header><h1 class="page-title">Nouns</h1></header><div class="page-body"><h3 id="f72e71a0-4284-4c53-8f07-580d9e5a68cc" class="block-color-purple">Nouns: Person, place, thing</h3><table id="7c6b3bae-ec73-4e71-9eb7-e69aa60f92f7" class="simple-table"><thead class="simple-table-header"><tr id="e923d9e0-5e0d-47c5-bfc3-7818dff736bc"><th id="pN;U" class="simple-table-header-color simple-table-header"></th><th id="coeS" class="simple-table-header-color simple-table-header">1st - feminine with η</th><th id="tQFw" class="simple-table-header-color simple-table-header">1st - feminine with σ</th><th id="ZFDU" class="simple-table-header-color simple-table-header">2nd - masculine with ης</th><th id="Apyb" class="simple-table-header-color simple-table-header">2nd - neuter</th><th id="}oAs" class="simple-table-header-color simple-table-header">3rd - masculine/fem (stems ending in consonants)</th><th id="dO;e" class="simple-table-header-color simple-table-header">3rd - masculine/fem (stems ending in τ, υ, ευ)</th><th id="KqOv" class="simple-table-header-color simple-table-header">3rd - neuter (stems ending in consonants)</th></tr></thead><tbody><tr id="2eda13d8-a224-440a-9100-2e65577c2812"><th id="pN;U" class="simple-table-header-color simple-table-header">Nom</th><td id="coeS" class="">η</td><td id="tQFw" class="">α</td><td id="ZFDU" class="">ος</td><td id="Apyb" class="">ον</td><td id="}oAs" class="">——</td><td id="dO;e" class="">——</td><td id="KqOv" class="">——</td></tr><tr id="ba00966c-c67e-4570-8242-fa4d5dd5fe6d"><th id="pN;U" class="simple-table-header-color simple-table-header">Gen</th><td id="coeS" class="">ης</td><td id="tQFw" class="">ας</td><td id="ZFDU" class="">ου</td><td id="Apyb" class="">ου</td><td id="}oAs" class="">ος</td><td id="dO;e" class="">εως</td><td id="KqOv" class="">ος</td></tr><tr id="c8a7bcba-24c1-4f33-8f86-fad4afe1d2ba"><th id="pN;U" class="simple-table-header-color simple-table-header">Dat</th><td id="coeS" class="">ῃ</td><td id="tQFw" class="">ᾳ</td><td id="ZFDU" class="">ῳ</td><td id="Apyb" class="">ῳ</td><td id="}oAs" class="">ι</td><td id="dO;e" class="">ει</td><td id="KqOv" class="">ι</td></tr><tr id="bf9bcd01-65e7-41b8-85df-b08e21496c1a"><th id="pN;U" class="simple-table-header-color simple-table-header">Acc</th><td id="coeS" class="">ην</td><td id="tQFw" class="">αν</td><td id="ZFDU" class="">ον</td><td id="Apyb" class="">ον</td><td id="}oAs" class="">α</td><td id="dO;e" class="">ιν</td><td id="KqOv" class="">——</td></tr><tr id="a4b7af6b-ffb4-4b75-893e-21863f8ad582"><th id="pN;U" class="simple-table-header-color simple-table-header">Nom</th><td id="coeS" class="">αι</td><td id="tQFw" class="">αι</td><td id="ZFDU" class="">οι</td><td id="Apyb" class="">α</td><td id="}oAs" class="">ες</td><td id="dO;e" class="">εις</td><td id="KqOv" class="">α</td></tr><tr id="05333d09-96e0-4355-9991-71e1549989b4"><th id="pN;U" class="simple-table-header-color simple-table-header">Gen</th><td id="coeS" class="">ων</td><td id="tQFw" class="">ων</td><td id="ZFDU" class="">ων</td><td id="Apyb" class="">ων</td><td id="}oAs" class="">ων</td><td id="dO;e" class="">εων</td><td id="KqOv" class="">ων</td></tr><tr id="79ac5cdb-cbdb-43e1-9c11-7e4db2fdc707"><th id="pN;U" class="simple-table-header-color simple-table-header">Dat</th><td id="coeS" class="">αις</td><td id="tQFw" class="">αις</td><td id="ZFDU" class="">οις</td><td id="Apyb" class="">οις</td><td id="}oAs" class="">ιν</td><td id="dO;e" class="">εσιν</td><td id="KqOv" class="">ιν</td></tr><tr id="6525cf42-a6fd-4d5b-97c6-fa249f1e96df"><th id="pN;U" class="simple-table-header-color simple-table-header">Acc</th><td id="coeS" class="">ας</td><td id="tQFw" class="">ας</td><td id="ZFDU" class="">ους</td><td id="Apyb" class="">α</td><td id="}oAs" class="">ας</td><td id="dO;e" class="">εις</td><td id="KqOv" class="">α</td></tr></tbody></table><h3 id="10e6890f-e8bf-4d50-bc0a-669fd8ea01a6" class="block-color-purple">Definite article “the”</h3><table id="3ecd862d-3438-499d-88d6-07e70315038e" class="simple-table"><thead class="simple-table-header"><tr id="2da96b21-3aec-4eab-b8a7-8385088b2197"><th id="l?lS" class="simple-table-header-color simple-table-header"></th><th id="^~^M" class="simple-table-header-color simple-table-header">Masculine</th><th id="ba@o" class="simple-table-header-color simple-table-header">Feminine</th><th id="Y|Y~" class="simple-table-header-color simple-table-header">Neuter</th></tr></thead><tbody><tr id="5c172d48-8eeb-4a78-855e-25a5b80e2093"><th id="l?lS" class="simple-table-header-color simple-table-header">Nom</th><td id="^~^M" class="">ὁ</td><td id="ba@o" class="">ἡ</td><td id="Y|Y~" class="">τό</td></tr><tr id="09cf1d7a-a41f-404a-be0f-63ec11d9a85c"><th id="l?lS" class="simple-table-header-color simple-table-header">Gen</th><td id="^~^M" class="">τοῦ</td><td id="ba@o" class="">τῆς</td><td id="Y|Y~" class="">τοῦ</td></tr><tr id="a7c95f93-bfc8-438a-b553-e45de66ace8b"><th id="l?lS" class="simple-table-header-color simple-table-header">Dat</th><td id="^~^M" class="">τῷ</td><td id="ba@o" class="">τῇ</td><td id="Y|Y~" class="">τῷ</td></tr><tr id="a971f763-f280-438e-b853-dc34b1706b34"><th id="l?lS" class="simple-table-header-color simple-table-header">Acc</th><td id="^~^M" class="">τόν</td><td id="ba@o" class="">τήν</td><td id="Y|Y~" class="">τό</td></tr><tr id="f1d54d14-af17-41f2-936b-a5d322b689a0"><th id="l?lS" class="simple-table-header-color simple-table-header">Nom</th><td id="^~^M" class="">οἱ</td><td id="ba@o" class="">αἱ</td><td id="Y|Y~" class="">τά</td></tr><tr id="53cffe64-d795-43c9-a0a4-222862ac5fb4"><th id="l?lS" class="simple-table-header-color simple-table-header">Gen</th><td id="^~^M" class="">τῶν</td><td id="ba@o" class="">τῶν</td><td id="Y|Y~" class="">τῶν</td></tr><tr id="d953f6f8-2fb2-4202-88ee-348952f2e69a"><th id="l?lS" class="simple-table-header-color simple-table-header">Dat</th><td id="^~^M" class="">τοῖς</td><td id="ba@o" class="">ταῖς</td><td id="Y|Y~" class="">τοῖς</td></tr><tr id="47cda706-7274-428d-bc8b-c950b3f318a3"><th id="l?lS" class="simple-table-header-color simple-table-header">Acc</th><td id="^~^M" class="">τούς</td><td id="ba@o" class="">τάς</td><td id="Y|Y~" class="">τά</td></tr></tbody></table><h3 id="01011b51-7169-4de4-b61e-6be7cbb9805a" class="block-color-purple">Personal pronouns: I, you, he/she/it, we, you all, they</h3><table id="71d9e209-2616-465d-8e67-299a0d228e13" class="simple-table"><thead class="simple-table-header"><tr id="cee5cb8d-b176-407f-96cd-5fe3345ccdc2"><th id="\~T]" class="simple-table-header-color simple-table-header"></th><th id="amPq" class="simple-table-header-color simple-table-header">I, we</th><th id="slQ]" class="simple-table-header-color simple-table-header">You, you all</th><th id="VEBv" class="simple-table-header-color simple-table-header">He, they</th><th id="pHu^" class="simple-table-header-color simple-table-header">She, them</th><th id="Iicr" class="simple-table-header-color simple-table-header">It, they, these things</th></tr></thead><tbody><tr id="ed0019ab-4355-4d77-bafc-ca37336effb8"><th id="\~T]" class="simple-table-header-color simple-table-header">Nom</th><td id="amPq" class="">ἐγώ</td><td id="slQ]" class="">σύ</td><td id="VEBv" class="">αὐτός</td><td id="pHu^" class="">αὐτή</td><td id="Iicr" class="">αὐτό</td></tr><tr id="19126287-da0e-426b-ad08-98eda98daf59"><th id="\~T]" class="simple-table-header-color simple-table-header">Gen</th><td id="amPq" class="">ἐμοῦ</td><td id="slQ]" class="">σοῦ</td><td id="VEBv" class="">αὐτοῦ</td><td id="pHu^" class="">αὐτῆς</td><td id="Iicr" class="">αὐτοῦ</td></tr><tr id="edbdf8c6-2c9a-481a-8707-acd330fe346d"><th id="\~T]" class="simple-table-header-color simple-table-header">Dat</th><td id="amPq" class="">ἐμοί</td><td id="slQ]" class="">σοί</td><td id="VEBv" class="">αὐτῷ</td><td id="pHu^" class="">αὐτῇ</td><td id="Iicr" class="">αὐτῷ</td></tr><tr id="52c43f9f-5117-4e59-bead-f44326d127d8"><th id="\~T]" class="simple-table-header-color simple-table-header">Acc</th><td id="amPq" class="">ἐμέ</td><td id="slQ]" class="">σέ</td><td id="VEBv" class="">αὐτόν</td><td id="pHu^" class="">αὐτήν</td><td id="Iicr" class="">αὐτό</td></tr><tr id="d1d692c9-1c42-462e-9dce-af656061df00"><th id="\~T]" class="simple-table-header-color simple-table-header">Nom</th><td id="amPq" class="">ἡμεῖς</td><td id="slQ]" class="">ὑμεῖς</td><td id="VEBv" class="">αὐτοί</td><td id="pHu^" class="">αὐταί</td><td id="Iicr" class="">αὐτά</td></tr><tr id="ec1c1fa5-99a7-4747-9837-f977315f730d"><th id="\~T]" class="simple-table-header-color simple-table-header">Gen</th><td id="amPq" class="">ἡμῶν</td><td id="slQ]" class="">ὑμῶν</td><td id="VEBv" class="">αὐτῶν</td><td id="pHu^" class="">αὐτῶν</td><td id="Iicr" class="">αὐτῶν</td></tr><tr id="34244717-db4c-4ea9-8660-361d59a94850"><th id="\~T]" class="simple-table-header-color simple-table-header">Dat</th><td id="amPq" class="">ἡμῖν</td><td id="slQ]" class="">ὑμῖν</td><td id="VEBv" class="">αὐτοῖς</td><td id="pHu^" class="">αὐταῖς</td><td id="Iicr" class="">αὐτοῖς</td></tr><tr id="19289390-e5d4-4d56-9c49-975da0768270"><th id="\~T]" class="simple-table-header-color simple-table-header">Acc</th><td id="amPq" class="">ἡμᾶς</td><td id="slQ]" class="">ὑμᾶς</td><td id="VEBv" class="">αὐτούς</td><td id="pHu^" class="">αὐτάς</td><td id="Iicr" class="">αὐτά</td></tr></tbody></table><h3 id="89903dea-28eb-4cf9-9396-6e65844d7214" class="block-color-purple">Demonstrative pronouns: Two words in Greek that mean “this, these”</h3><p id="74f78239-b803-4abf-bd96-6b611eed6d34" class="">Word “ἐκεῖνος, η, ον” means “that, those”</p><table id="584877ce-0b8e-462f-829f-d12061404c36" class="simple-table"><thead class="simple-table-header"><tr id="38b3d3f8-4b7a-45ce-a169-288293b2f844"><th id="sg&gt;Q" class="simple-table-header-color simple-table-header"></th><th id="x@pk" class="simple-table-header-color simple-table-header">Masc</th><th id="oEWt" class="simple-table-header-color simple-table-header">Fem</th><th id="tN{]" class="simple-table-header-color simple-table-header">Neuter</th><th id="&gt;AC`" class="simple-table-header-color simple-table-header">Masc</th><th id="bAzy" class="simple-table-header-color simple-table-header">Fem</th><th id="uwi}" class="simple-table-header-color simple-table-header">Neuter</th></tr></thead><tbody><tr id="c0aa0870-739c-4927-b806-60155ba9ed0a"><th id="sg&gt;Q" class="simple-table-header-color simple-table-header">Nom</th><td id="x@pk" class="">οὗτος</td><td id="oEWt" class="">αὕτη</td><td id="tN{]" class="">τοῦτο</td><td id="&gt;AC`" class="">ὅδε</td><td id="bAzy" class="">ἥδε</td><td id="uwi}" class="">τόδε</td></tr><tr id="4f521cb8-b6b8-461e-9a15-564cebf3e05d"><th id="sg&gt;Q" class="simple-table-header-color simple-table-header">Gen</th><td id="x@pk" class="">τούτου</td><td id="oEWt" class="">ταύτης</td><td id="tN{]" class="">τούτου</td><td id="&gt;AC`" class="">τοῦδε</td><td id="bAzy" class="">τοῦδε</td><td id="uwi}" class="">τοῦδε</td></tr><tr id="1f040629-d53e-4e24-bb8c-43a25aae8b49"><th id="sg&gt;Q" class="simple-table-header-color simple-table-header">Dat</th><td id="x@pk" class="">τούτῳ</td><td id="oEWt" class="">ταύτῃ</td><td id="tN{]" class="">τούτῳ</td><td id="&gt;AC`" class="">τῷδε</td><td id="bAzy" class="">τῇδε</td><td id="uwi}" class="">τῷδε</td></tr><tr id="e1fe758e-5084-4d5b-9852-069900e00807"><th id="sg&gt;Q" class="simple-table-header-color simple-table-header">Acc</th><td id="x@pk" class="">τούτον</td><td id="oEWt" class="">ταύτην</td><td id="tN{]" class="">τούτον</td><td id="&gt;AC`" class="">τόνδε</td><td id="bAzy" class="">τήνδε</td><td id="uwi}" class="">τόδε</td></tr><tr id="25a8dd72-36e6-4ecd-9975-99085cbd6ad0"><th id="sg&gt;Q" class="simple-table-header-color simple-table-header">Nom</th><td id="x@pk" class="">οὗτοι</td><td id="oEWt" class="">αὗται</td><td id="tN{]" class="">ταῦτα</td><td id="&gt;AC`" class="">οἵδε</td><td id="bAzy" class="">αἵδε</td><td id="uwi}" class="">τάδε</td></tr><tr id="f5900308-d9cd-4d25-b0b0-075d2f42e111"><th id="sg&gt;Q" class="simple-table-header-color simple-table-header">Gen</th><td id="x@pk" class="">τούτων</td><td id="oEWt" class="">τούτων</td><td id="tN{]" class="">τούτων</td><td id="&gt;AC`" class="">τῶνδε</td><td id="bAzy" class="">τῶνδε</td><td id="uwi}" class="">τῶνδε</td></tr><tr id="811f0b69-3c99-424e-ba79-89374e8615be"><th id="sg&gt;Q" class="simple-table-header-color simple-table-header">Dat</th><td id="x@pk" class="">τούτοις</td><td id="oEWt" class="">ταύταις</td><td id="tN{]" class="">τούτοις</td><td id="&gt;AC`" class="">τοῖσδε</td><td id="bAzy" class="">ταῖσδε</td><td id="uwi}" class="">τοῖσδε</td></tr><tr id="37009e16-fa5a-48e2-b337-cfc1962bacc6"><th id="sg&gt;Q" class="simple-table-header-color simple-table-header">Acc</th><td id="x@pk" class="">τούτους</td><td id="oEWt" class="">ταύτας</td><td id="tN{]" class="">ταῦτα</td><td id="&gt;AC`" class="">τούσδε</td><td id="bAzy" class="">τάσδε</td><td id="uwi}" class="">τάδε</td></tr></tbody></table><h3 id="2eb4d0e6-639a-42d0-b4de-9d48d11ce166" class="block-color-purple">Interrogative pronouns: who? what? which? - question words</h3><table id="87d711ec-57c3-45d9-8f7c-dcd7f106da63" class="simple-table"><thead class="simple-table-header"><tr id="5bc1dd58-a5e4-4a0e-8934-d122c5982a90"><th id="irKr" class="simple-table-header-color simple-table-header"></th><th id="lZlD" class="simple-table-header-color simple-table-header">Masc/Fem</th><th id="~&lt;r}" class="simple-table-header-color simple-table-header">Neuter</th></tr></thead><tbody><tr id="03f5e736-a421-4d1c-9fb0-4cc679d08a91"><th id="irKr" class="simple-table-header-color simple-table-header">Nom</th><td id="lZlD" class="">τίς</td><td id="~&lt;r}" class="">τί</td></tr><tr id="f1f9c6ec-adf7-4b90-b4ec-973bd978eabf"><th id="irKr" class="simple-table-header-color simple-table-header">Gen</th><td id="lZlD" class="">τίνος</td><td id="~&lt;r}" class="">τίνος</td></tr><tr id="a5dd67f7-d6c0-48c4-b6a5-f5a1c2aa5961"><th id="irKr" class="simple-table-header-color simple-table-header">Dat</th><td id="lZlD" class="">τίνι</td><td id="~&lt;r}" class="">τίνι</td></tr><tr id="8412fcd5-0721-45c4-a626-b7cdcd3c6787"><th id="irKr" class="simple-table-header-color simple-table-header">Acc</th><td id="lZlD" class="">τίνα</td><td id="~&lt;r}" class="">τί</td></tr><tr id="bc80dbfd-8fe2-43e0-8717-041e99c8e5b0"><th id="irKr" class="simple-table-header-color simple-table-header">Nom</th><td id="lZlD" class="">τίνες</td><td id="~&lt;r}" class="">τίνα</td></tr><tr id="eb20c3d9-ad18-45cc-9349-ae3819d20685"><th id="irKr" class="simple-table-header-color simple-table-header">Gen</th><td id="lZlD" class="">τίνων</td><td id="~&lt;r}" class="">τίνων</td></tr><tr id="8d442af0-6447-4fbb-9b7a-e2a6d2208bc1"><th id="irKr" class="simple-table-header-color simple-table-header">Dat</th><td id="lZlD" class="">τίσιν</td><td id="~&lt;r}" class="">τίσιν</td></tr><tr id="b279ccec-940e-4f36-b6ce-33a222c89127"><th id="irKr" class="simple-table-header-color simple-table-header">Acc</th><td id="lZlD" class="">τίνας</td><td id="~&lt;r}" class="">τίνα</td></tr></tbody></table><h3 id="389f2e17-835a-4def-86de-fea3b1befcbe" class="block-color-purple">Relative pronouns: who, which (the woman <span style="border-bottom:0.05em solid">who</span> sings, the rock <span style="border-bottom:0.05em solid">which</span> is lying on the ground) - <em>not the question word “which”</em></h3><table id="d93e2425-2b0d-4f2f-b1de-2081c02a2a68" class="simple-table"><thead class="simple-table-header"><tr id="74675eb5-d0ca-49ac-b001-b082ae919031"><th id="Kj~^" class="simple-table-header-color simple-table-header"></th><th id="==@j" class="simple-table-header-color simple-table-header">Masculine</th><th id="oEnf" class="simple-table-header-color simple-table-header">Feminine</th><th id="dzl`" class="simple-table-header-color simple-table-header">Neuter</th></tr></thead><tbody><tr id="463f61fb-dd19-46a8-8c07-b1694e7ed127"><th id="Kj~^" class="simple-table-header-color simple-table-header">Nom</th><td id="==@j" class="">ὅς</td><td id="oEnf" class="">ἥ</td><td id="dzl`" class="">ὅ</td></tr><tr id="32761e2a-dec7-4250-89aa-63ae0b1d8bc9"><th id="Kj~^" class="simple-table-header-color simple-table-header">Gen</th><td id="==@j" class="">οὗ</td><td id="oEnf" class="">ἧς</td><td id="dzl`" class="">οὗ</td></tr><tr id="f659685c-91ae-4ac7-870e-953f269ba630"><th id="Kj~^" class="simple-table-header-color simple-table-header">Dat</th><td id="==@j" class="">ῷ</td><td id="oEnf" class="">ᾗ</td><td id="dzl`" class="">ᾧ</td></tr><tr id="72318d3d-07cb-40e6-8fa7-43c46be98adb"><th id="Kj~^" class="simple-table-header-color simple-table-header">Acc</th><td id="==@j" class="">ὅν</td><td id="oEnf" class="">ἥν</td><td id="dzl`" class="">ὅ</td></tr><tr id="b90cb7c9-e5d1-4d82-9514-b3ba05ccb0c3"><th id="Kj~^" class="simple-table-header-color simple-table-header">Nom</th><td id="==@j" class="">οἵ</td><td id="oEnf" class="">αἵ</td><td id="dzl`" class="">ἅ</td></tr><tr id="335776ad-c626-4963-a9ae-c3e9dfd0d002"><th id="Kj~^" class="simple-table-header-color simple-table-header">Gen</th><td id="==@j" class="">ὧν</td><td id="oEnf" class="">ὧν</td><td id="dzl`" class="">ὥν</td></tr><tr id="85e93efd-a89e-4ef2-b6bb-ccd7285e7aca"><th id="Kj~^" class="simple-table-header-color simple-table-header">Dat</th><td id="==@j" class="">οἷς</td><td id="oEnf" class="">αἷς</td><td id="dzl`" class="">οἷς</td></tr><tr id="03741a7b-4b58-4927-9d90-127e53d5604b"><th id="Kj~^" class="simple-table-header-color simple-table-header">Acc</th><td id="==@j" class="">οὕς</td><td id="oEnf" class="">ἅς</td><td id="dzl`" class="">ἅ</td></tr></tbody></table><p id="27a4e25b-b364-46d7-996d-416ece83a10a" class="">
+</p></div></article></body></html>

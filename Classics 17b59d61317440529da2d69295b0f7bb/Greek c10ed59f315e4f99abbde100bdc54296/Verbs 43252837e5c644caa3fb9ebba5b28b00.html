@@ -1,0 +1,701 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Verbs</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="43252837-e5c6-44ca-a3fb-9ebba5b28b00" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1531816458010-fb7685eecbcb?ixlib=rb-1.2.1&amp;q=80&amp;cs=tinysrgb&amp;fm=jpg&amp;crop=entropy" style="object-position:center 50%"/><h1 class="page-title">Verbs</h1></header><div class="page-body"><ul id="0f377902-a919-45e7-a0c8-61ab898bde8a" class="toggle"><li><details open=""><summary><mark class="highlight-orange">Basic properties and translations</mark></summary><p id="d30dcb02-e12e-4767-a62c-d453f6a39b42" class="">5 properties of Greek verb:</p><table id="7d13e970-8715-4018-ade3-26f149047c49" class="simple-table"><tbody><tr id="63e18f5c-cc87-4363-8d2a-0b966c43de3e"><td id="Y@la" class="">Person</td><td id="Is:c" class="" style="width:325px">1st, 2nd, 3rd, dual (2)</td></tr><tr id="f4b029f0-3f5e-4d21-ad57-d8a47f634678"><td id="Y@la" class="">Number</td><td id="Is:c" class="" style="width:325px">Singular, plural, dual (2)</td></tr><tr id="b395cb97-e749-457f-8959-59d0007a0385"><td id="Y@la" class="">Tense</td><td id="Is:c" class="" style="width:325px">Present, imperfect, future, aorist, perfect, pluperfect, future perfect (rare)</td></tr><tr id="732f4cb7-f1d7-41bf-bd1e-612cfb36b40a"><td id="Y@la" class="">Voice</td><td id="Is:c" class="" style="width:325px">Active, middle, passive</td></tr><tr id="e4c2b551-c173-41d7-86e3-f02f7fdaeec1"><td id="Y@la" class="">Mood</td><td id="Is:c" class="" style="width:325px">Indicative, imperative, subjunctive, optative, non-mood verb forms of infinitives &amp; participles</td></tr></tbody></table><h3 id="3e8ff285-b710-47f8-94c3-fb92613931a3" class="block-color-purple">Greek verb translation</h3><table id="f985c44a-7d6c-4a51-bd01-9f24a966e95c" class="simple-table"><thead class="simple-table-header"><tr id="d9da0110-ae1b-4af9-a531-2fc0650c0ec9"><th id="trVs" class="simple-table-header-color simple-table-header">Tense</th><th id="@TDU" class="simple-table-header-color simple-table-header" style="width:273px">Active</th><th id="evHm" class="simple-table-header-color simple-table-header">Middle</th><th id="r@ed" class="simple-table-header-color simple-table-header">Passive</th></tr></thead><tbody><tr id="87008483-32be-4ec9-9e2b-982fed0343fb"><th id="trVs" class="simple-table-header-color simple-table-header">Present</th><td id="@TDU" class="" style="width:273px">I stop/am stopping
+You stop/are stopping
+He stops/is stopping</td><td id="evHm" class="">I stop (myself)
+You stop (yourself)
+He stops (himself)</td><td id="r@ed" class="">I <em><strong>am</strong></em><em> </em>stopped (by someone)
+You <em><strong>are</strong></em> stopped (by someone)
+He <em><strong>is</strong></em> stopped (by someone)</td></tr><tr id="fae18b1e-5de5-4f05-bc47-566c30e9f42f"><th id="trVs" class="simple-table-header-color simple-table-header">Imperfect</th><td id="@TDU" class="" style="width:273px">I was stopping
+You were stopping
+He was stopping</td><td id="evHm" class="">I was stopping (myself)
+You were stopping (Yourself)
+He was stopping (himself)</td><td id="r@ed" class="">I <em><strong>was being</strong></em> stopped (by someone)
+You <em><strong>were being</strong></em> stopped
+He <em><strong>was being </strong></em>stopped</td></tr><tr id="b8a855ca-b6d0-45b9-909f-1928b7fb1b79"><th id="trVs" class="simple-table-header-color simple-table-header">Future</th><td id="@TDU" class="" style="width:273px">I will stop (someone/something)
+You will stop
+etc</td><td id="evHm" class="">I will stop (myself)
+You will stop
+etc</td><td id="r@ed" class="">I <em><strong>will be</strong></em><strong><strong> </strong></strong>stopped (by someone)
+You <em><strong>will be</strong></em><strong><strong> </strong></strong>stopped
+etc</td></tr><tr id="b2701073-f4e3-4325-9026-dbe50c7f8994"><th id="trVs" class="simple-table-header-color simple-table-header">Aorist</th><td id="@TDU" class="" style="width:273px">I stopped (someone/something)
+You stopped
+He/she/it stopped</td><td id="evHm" class="">I stopped (myself)
+You stopped
+He/she/it stopped</td><td id="r@ed" class="">I <em><strong>was</strong></em><strong><strong> </strong></strong>stopped (by someone)
+You <em><strong>were</strong></em> stopped
+He/she/it <em><strong>was</strong></em> stopped</td></tr><tr id="a03504eb-0f55-406e-9ed1-cb642583c038"><th id="trVs" class="simple-table-header-color simple-table-header">Perfect</th><td id="@TDU" class="" style="width:273px">I <em><strong>have</strong></em> stopped (someone/something)
+You <em><strong>have </strong></em>stopped
+He <em><strong>has</strong></em> stopped</td><td id="evHm" class="">I have stopped (myself)
+You have stopped (yourself)
+He has stopped (himself)</td><td id="r@ed" class="">I <em><strong>have been</strong></em> stopped (by someone)
+You <em><strong>have been</strong></em> stopped
+He <em><strong>has been</strong></em> stopped had stopped</td></tr><tr id="eb3e3c39-f2a0-4e9e-9810-f15344d58fea"><th id="trVs" class="simple-table-header-color simple-table-header">Pluperfect</th><td id="@TDU" class="" style="width:273px">I had stopped</td><td id="evHm" class="">I had stopped (myself)</td><td id="r@ed" class="">I <em><strong>had been</strong></em> stopped</td></tr><tr id="877fed0a-199f-4dae-8ae0-331855834350"><th id="trVs" class="simple-table-header-color simple-table-header">Future perfect</th><td id="@TDU" class="" style="width:273px">I will have stopped</td><td id="evHm" class="">I will have stopped (myself)</td><td id="r@ed" class="">I will have been stopped</td></tr></tbody></table></details></li></ul><ul id="b713c2fb-e811-438d-9ab6-dc95ca5ffadb" class="toggle"><li><details open=""><summary><mark class="highlight-orange">Principal parts</mark></summary><p id="93c6df19-17fc-4ea4-8a11-34409a0b8ad7" class="">1st pp</p><ul id="ed3ef85d-6344-467f-84be-622879f148e8" class="bulleted-list"><li style="list-style-type:disc">Present active, middle/passive</li></ul><ul id="195b4e82-7299-4f3e-b073-f85235301dc1" class="bulleted-list"><li style="list-style-type:disc">Imperfect active, middle/passive</li></ul><p id="855ea94f-8ade-4185-bb44-40b7fb20f091" class="">2nd pp</p><ul id="36cc419e-c252-4be0-8f8d-fca7343e8896" class="bulleted-list"><li style="list-style-type:disc">Future active, middle (no passive)</li></ul><p id="ec2760c2-2a97-4b36-b919-e1aca6d7b65f" class="">3rd pp</p><ul id="48257023-83ff-49ac-9c59-7e32c1964d5d" class="bulleted-list"><li style="list-style-type:disc">Aorist active, middle (no passive)</li></ul><p id="576f50d1-bb66-4d28-bcd3-6783b6763580" class="">4th pp</p><ul id="89d73efe-291e-46a2-9c88-f8b44bbe39f2" class="bulleted-list"><li style="list-style-type:disc">Perfect active</li></ul><ul id="01948d26-fdf5-4e0f-9d06-16b07dfc0b4c" class="bulleted-list"><li style="list-style-type:disc">Pluperfect active</li></ul><p id="3b09acb7-f9e0-41c4-89d0-aeafe2e88d6f" class="">5th pp</p><ul id="3afd8e7e-706f-416b-8381-a6da5b33e399" class="bulleted-list"><li style="list-style-type:disc">Perfect middle/passive</li></ul><ul id="252ec197-d89f-43ca-a2ef-f06faea5cd6a" class="bulleted-list"><li style="list-style-type:disc">Pluperfect middle/passive</li></ul><p id="6098a1e7-452e-46ac-ac64-6a3ef10ad99f" class="">6th pp</p><ul id="b9afa42d-9494-4dd3-8300-b334522b5e20" class="bulleted-list"><li style="list-style-type:disc">Future passive</li></ul><ul id="2322cf00-5a21-475c-b37e-7e1da770822e" class="bulleted-list"><li style="list-style-type:disc">Aorist passive</li></ul><table id="5fe3464a-b379-4ec4-b6ee-3585e477bc97" class="simple-table"><thead class="simple-table-header"><tr id="6c137f0d-f4d6-4f84-8d40-61b1a2533cef"><th id="dF&lt;n" class="simple-table-header-color simple-table-header" style="width:223px">Tense</th><th id="ZO?:" class="simple-table-header-color simple-table-header">Principal part</th></tr></thead><tbody><tr id="4ba4c978-524f-4270-a409-70fb3f736a5a"><td id="dF&lt;n" class="" style="width:223px">Present active</td><td id="ZO?:" class="">1</td></tr><tr id="531cd52d-c923-47c2-9130-4ac5d8f9bff1"><td id="dF&lt;n" class="" style="width:223px">Present middle/passive</td><td id="ZO?:" class="">1</td></tr><tr id="434d00e9-9972-4a86-bccc-ec36a9bf6dde"><td id="dF&lt;n" class="" style="width:223px">Imperfect active</td><td id="ZO?:" class="">1</td></tr><tr id="b16aa81f-6231-4505-80dc-9e93d6f093b0"><td id="dF&lt;n" class="" style="width:223px">Imperfect middle/passive</td><td id="ZO?:" class="">1</td></tr><tr id="300ab07f-8ebf-4a29-bee4-a01293410036"><td id="dF&lt;n" class="" style="width:223px">Future active/middle</td><td id="ZO?:" class="">2</td></tr><tr id="315ba110-93a9-40c9-97ac-24baf03e9296"><td id="dF&lt;n" class="" style="width:223px">Future passive</td><td id="ZO?:" class="">6</td></tr><tr id="8a379cb5-d0a9-4342-a938-795a432f3427"><td id="dF&lt;n" class="" style="width:223px">Aorist active/middle</td><td id="ZO?:" class="">3</td></tr><tr id="95ce5b4a-e168-4f0b-b59e-8fa66dbc6036"><td id="dF&lt;n" class="" style="width:223px">Aorist passive</td><td id="ZO?:" class="">6</td></tr><tr id="596780ab-4359-439b-8a48-e7daa3cbad26"><td id="dF&lt;n" class="" style="width:223px">Perfect/pluperfect active</td><td id="ZO?:" class="">4</td></tr><tr id="bbb7cffa-035f-4dff-92c1-796a50f0991a"><td id="dF&lt;n" class="" style="width:223px">Perfect/pluperfect passive</td><td id="ZO?:" class="">5</td></tr></tbody></table></details></li></ul><ul id="009d9c90-00fd-4475-85dd-17888e4cf4ec" class="toggle"><li><details open=""><summary><mark class="highlight-orange">Basic tenses (Present, imperfect)</mark></summary><h3 id="f2530a7c-e301-45f2-928e-9aad130d0aa0" class="block-color-pink"><mark class="highlight-purple">Active</mark></h3><table id="7fe91cd4-9a04-4756-9dcb-a4cf198c28f0" class="simple-table"><thead class="simple-table-header"><tr id="da5ae1c3-93eb-493a-90b8-2ff67073d75c"><th id="HshJ" class="simple-table-header-color simple-table-header"></th><th id="D_Nd" class="simple-table-header-color simple-table-header">Present (1st pp)</th><th id="&lt;Osm" class="simple-table-header-color simple-table-header">Imperfect (1st pp)</th><th id="|Auu" class="simple-table-header-color simple-table-header">Future (2nd pp)</th><th id="R?:o" class="simple-table-header-color simple-table-header">Aorist (3rd pp)</th><th id="b`lD" class="simple-table-header-color simple-table-header">Perfect (4th pp)</th></tr></thead><tbody><tr id="02a9d297-50da-4555-9189-0302c65d1398"><th id="HshJ" class="simple-table-header-color simple-table-header">I</th><td id="D_Nd" class="">ω</td><td id="&lt;Osm" class="">ον</td><td id="|Auu" class="">ω</td><td id="R?:o" class="">α</td><td id="b`lD" class="">α</td></tr><tr id="2d7ebeb0-00c5-479d-9e38-a769ca2fb53a"><th id="HshJ" class="simple-table-header-color simple-table-header">You</th><td id="D_Nd" class="">εις</td><td id="&lt;Osm" class="">ες</td><td id="|Auu" class="">εις</td><td id="R?:o" class="">ας</td><td id="b`lD" class="">ας</td></tr><tr id="764fd7e2-1a71-4d3f-a4ca-93c62f3399d8"><th id="HshJ" class="simple-table-header-color simple-table-header">He/she/it</th><td id="D_Nd" class="">ει</td><td id="&lt;Osm" class="">ε(ν)</td><td id="|Auu" class="">ει</td><td id="R?:o" class="">αν</td><td id="b`lD" class="">ε/εν</td></tr><tr id="cc1f0ee3-ab95-4589-aa45-fa085e0ecffc"><th id="HshJ" class="simple-table-header-color simple-table-header">We</th><td id="D_Nd" class="">ομεν</td><td id="&lt;Osm" class="">ομεν</td><td id="|Auu" class="">ομεν</td><td id="R?:o" class="">αμεν</td><td id="b`lD" class="">αμεν</td></tr><tr id="0800cdfe-8cae-48be-90ab-64a505af044a"><th id="HshJ" class="simple-table-header-color simple-table-header">You all</th><td id="D_Nd" class="">ετε</td><td id="&lt;Osm" class="">ετε</td><td id="|Auu" class="">ετε</td><td id="R?:o" class="">ατε</td><td id="b`lD" class="">ατε</td></tr><tr id="d5c4ec55-85b9-4526-a7bd-f9843519ae27"><th id="HshJ" class="simple-table-header-color simple-table-header">They</th><td id="D_Nd" class="">ουσι(ν)</td><td id="&lt;Osm" class="">ον</td><td id="|Auu" class="">ουσι(ν)</td><td id="R?:o" class="">αν</td><td id="b`lD" class="">ασιν</td></tr><tr id="d7f9ea31-53d0-467d-a19a-a5a568d711dc"><th id="HshJ" class="simple-table-header-color simple-table-header"><em>Infinitive</em></th><td id="D_Nd" class="">ειν</td><td id="&lt;Osm" class=""></td><td id="|Auu" class="">ειν</td><td id="R?:o" class="">αι</td><td id="b`lD" class="">εναι</td></tr></tbody></table><h3 id="52b163f7-783a-4a0c-a64f-0448eff1501f" class="block-color-pink"><mark class="highlight-purple">Passive middle/passive (M/P)</mark></h3><table id="99e05da5-a375-4bee-a636-bcfabf53a2e7" class="simple-table"><thead class="simple-table-header"><tr id="c64f389c-5809-4ab2-846b-ed080a011f7c"><th id="ozak" class="simple-table-header-color simple-table-header"></th><th id="HGfe" class="simple-table-header-color simple-table-header">Present M/P</th><th id="qBZj" class="simple-table-header-color simple-table-header">Imperfect M/P</th><th id="N|&gt;\" class="simple-table-header-color simple-table-header">Perfect M/P (5th pp)</th><th id="z@PL" class="simple-table-header-color simple-table-header">Future passive (6th pp)</th><th id="dM_:" class="simple-table-header-color simple-table-header">Aorist passive (6th pp)</th></tr></thead><tbody><tr id="9e2d8f71-881c-496d-ac10-7719e08809e6"><th id="ozak" class="simple-table-header-color simple-table-header">I</th><td id="HGfe" class="">ομαι</td><td id="qBZj" class="">ομην</td><td id="N|&gt;\" class="">μαι</td><td id="z@PL" class="">ομαι</td><td id="dM_:" class="">θην</td></tr><tr id="a16fa063-55e7-482a-bb2c-eb644f05ca01"><th id="ozak" class="simple-table-header-color simple-table-header">You</th><td id="HGfe" class="">ει</td><td id="qBZj" class="">ου</td><td id="N|&gt;\" class="">σαι</td><td id="z@PL" class="">ει</td><td id="dM_:" class="">θης</td></tr><tr id="a3f325d4-18d5-4620-84f7-8bfc187b46c9"><th id="ozak" class="simple-table-header-color simple-table-header">He/she/it</th><td id="HGfe" class="">εται</td><td id="qBZj" class="">ετο</td><td id="N|&gt;\" class="">ται</td><td id="z@PL" class="">εται</td><td id="dM_:" class="">θη</td></tr><tr id="fdc3572d-b8ed-4d29-a469-af4755fa6f1a"><th id="ozak" class="simple-table-header-color simple-table-header">We</th><td id="HGfe" class="">ομεθα</td><td id="qBZj" class="">ομεθα</td><td id="N|&gt;\" class="">μεθα</td><td id="z@PL" class="">ομεθα</td><td id="dM_:" class="">θημεν</td></tr><tr id="e54550de-2533-4ec2-b38d-3826cd64a6eb"><th id="ozak" class="simple-table-header-color simple-table-header">You all</th><td id="HGfe" class="">εσθε</td><td id="qBZj" class="">εσθε</td><td id="N|&gt;\" class="">σθε</td><td id="z@PL" class="">ονται</td><td id="dM_:" class="">θητε</td></tr><tr id="a66ce5d8-6a67-4d2a-9f70-f2d9caee21f4"><th id="ozak" class="simple-table-header-color simple-table-header">They</th><td id="HGfe" class="">εσθαι</td><td id="qBZj" class="">οντο</td><td id="N|&gt;\" class="">νται</td><td id="z@PL" class="">εσθαι</td><td id="dM_:" class="">θησαν</td></tr><tr id="ecb9a295-ce37-4660-9913-195c786b2bc0"><th id="ozak" class="simple-table-header-color simple-table-header"><em>Infinitive</em></th><td id="HGfe" class="">εσθαι</td><td id="qBZj" class=""></td><td id="N|&gt;\" class="">σθαι</td><td id="z@PL" class="">εσθαι</td><td id="dM_:" class="">θηναι</td></tr></tbody></table><h3 id="982d7b4e-382a-41fc-a2ee-f2bf582a0c77" class="block-color-pink"><mark class="highlight-purple">Imperfect tense - 1st pp with augment</mark></h3><table id="e770a5fe-98aa-4712-aaeb-3c0f0330a8a3" class="simple-table"><thead class="simple-table-header"><tr id="67a4a123-5deb-4bf6-9d77-c0cb4cfbe3cd"><th id="&gt;Mtv" class="simple-table-header-color simple-table-header"></th><th id="~=yM" class="simple-table-header-color simple-table-header">Active</th><th id="PXQP" class="simple-table-header-color simple-table-header">Middle/Passive</th></tr></thead><tbody><tr id="c7318041-ae43-4871-8308-940412760bc7"><th id="&gt;Mtv" class="simple-table-header-color simple-table-header">Subject</th><td id="~=yM" class="">Indicative</td><td id="PXQP" class="">Indicative</td></tr><tr id="f2906b2a-4c57-40a3-8ae8-bd39e8b520bb"><th id="&gt;Mtv" class="simple-table-header-color simple-table-header">I</th><td id="~=yM" class="">ἐ__ον</td><td id="PXQP" class="">ἐ__ομην</td></tr><tr id="2e7e1cec-dc93-4937-9dea-82e89ad31cf5"><th id="&gt;Mtv" class="simple-table-header-color simple-table-header">You</th><td id="~=yM" class="">ἐ__ες</td><td id="PXQP" class="">ἐ__οθ</td></tr><tr id="96327155-e946-43c7-a5ff-3ae5ca00329b"><th id="&gt;Mtv" class="simple-table-header-color simple-table-header">He/she/it</th><td id="~=yM" class="">ἐ__ε(ν)</td><td id="PXQP" class="">ἐ__ετο</td></tr><tr id="bf5f95b2-78d3-4ad5-bcb8-d10f08c70192"><th id="&gt;Mtv" class="simple-table-header-color simple-table-header">We</th><td id="~=yM" class="">ἐ__ομεν</td><td id="PXQP" class="">ἐ__ομεθα</td></tr><tr id="ad69aa5c-63c7-4ed7-8345-9874d2f2abc7"><th id="&gt;Mtv" class="simple-table-header-color simple-table-header">You all</th><td id="~=yM" class="">ἐ__ετε</td><td id="PXQP" class="">ἐ__εσθε</td></tr><tr id="dd5496e0-a0ae-45bc-90c7-dc00d4732a67"><th id="&gt;Mtv" class="simple-table-header-color simple-table-header">They</th><td id="~=yM" class="">ἐ__ον</td><td id="PXQP" class="">ἐ__οντο</td></tr></tbody></table><p id="d3964129-5e5a-4983-bf24-d1a158c564d8" class="">
+</p></details></li></ul><ul id="616e6a6d-3c39-4723-b7e5-dfcb5870af79" class="toggle"><li><details open=""><summary><mark class="highlight-orange">Moods and participles</mark></summary><h3 id="cf589e98-9a1a-4a02-a44f-6a724361b45e" class="block-color-purple">Present Moods</h3><p id="23c4b540-c018-4528-a4a4-2734726f726f" class="">Present tense: use 1st pp</p><p id="0d99e999-a2f6-4a8c-9a1b-26b476ae9995" class="">Future: use 2nd pp but same endings as present</p><table id="cdcd44b4-7916-4f72-a5d5-0cb1613ad782" class="simple-table"><thead class="simple-table-header"><tr id="9246f7ce-540c-459c-bb90-77ba5e176c05"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"></th><th id="RUj{" class="simple-table-header-color simple-table-header">Active</th><th id="jkPq" class="simple-table-header-color simple-table-header"></th><th id="[kE@" class="simple-table-header-color simple-table-header"></th><th id="}xsQ" class="simple-table-header-color simple-table-header">Middle/Passive</th><th id="k\XE" class="simple-table-header-color simple-table-header"></th><th id="Mruj" class="simple-table-header-color simple-table-header"></th></tr></thead><tbody><tr id="50545d1e-1368-407f-9d22-07d8e0f316fd"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>Subject</strong></th><td id="RUj{" class=""><strong>Indicative</strong></td><td id="jkPq" class=""><strong>Subjunctive</strong></td><td id="[kE@" class=""><strong>Optative</strong></td><td id="}xsQ" class=""><strong>Indicative</strong></td><td id="k\XE" class=""><strong>Subjunctive</strong></td><td id="Mruj" class=""><strong>Optative</strong></td></tr><tr id="f4c4256f-41c6-4971-9ffa-00364e260f25"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>I</strong></th><td id="RUj{" class="">ω</td><td id="jkPq" class="">ω</td><td id="[kE@" class="">οιμι</td><td id="}xsQ" class="">ομαι</td><td id="k\XE" class="">ωμαι</td><td id="Mruj" class="">οιμην</td></tr><tr id="2e34501d-398d-4218-a264-01ed7106223b"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>You</strong></th><td id="RUj{" class="">εις</td><td id="jkPq" class="">ῃς</td><td id="[kE@" class="">οις</td><td id="}xsQ" class="">ει</td><td id="k\XE" class="">ῃ</td><td id="Mruj" class="">οιο</td></tr><tr id="579b2763-3aad-42d7-b22a-e476c1213d87"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>He/she/it</strong></th><td id="RUj{" class="">ει</td><td id="jkPq" class="">ῃ</td><td id="[kE@" class="">οι</td><td id="}xsQ" class="">εται</td><td id="k\XE" class="">ηται</td><td id="Mruj" class="">οιτο</td></tr><tr id="d8d93ae0-a1c2-4403-be08-64b43950c72f"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>We</strong></th><td id="RUj{" class="">ομεν</td><td id="jkPq" class="">ωμεν</td><td id="[kE@" class="">οιμεν</td><td id="}xsQ" class="">ομεθα</td><td id="k\XE" class="">ωμεθα</td><td id="Mruj" class="">οιμεθα</td></tr><tr id="bb4ca518-50bf-4191-8b63-8cde2fb9d0e7"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>You all</strong></th><td id="RUj{" class="">ετε</td><td id="jkPq" class="">ητε</td><td id="[kE@" class="">οιτε</td><td id="}xsQ" class="">εσθε</td><td id="k\XE" class="">ησθε</td><td id="Mruj" class="">οισθε</td></tr><tr id="ae666872-cd77-4ed8-ba30-5d4995c2ffdf"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>They</strong></th><td id="RUj{" class="">ουσι(ν)</td><td id="jkPq" class="">ωσι(ν)</td><td id="[kE@" class="">οιεν</td><td id="}xsQ" class="">ονται</td><td id="k\XE" class="">ωνται</td><td id="Mruj" class="">οιντο</td></tr><tr id="2a738a29-b207-4f99-87bb-23c8481ad8c0"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px">Infinitive</th><td id="RUj{" class="">ειν</td><td id="jkPq" class=""></td><td id="[kE@" class=""></td><td id="}xsQ" class="">εσθαι</td><td id="k\XE" class=""></td><td id="Mruj" class=""></td></tr><tr id="90cf1330-c494-405c-aa9b-63f442d5021b"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px">Participle (See participle chart below)</th><td id="RUj{" class="">ων</td><td id="jkPq" class="">ουσα</td><td id="[kE@" class="">ον</td><td id="}xsQ" class="">ομενος</td><td id="k\XE" class="">ομενη</td><td id="Mruj" class="">οιμενον</td></tr></tbody></table><h3 id="40e45ed7-83d5-4577-ab43-7213e78c955f" class="block-color-teal">Present Active + Middle/Passive Participle (Endings only)</h3><table id="bc811d93-7de7-4e53-95bf-d83479e39c36" class="simple-table"><thead class="simple-table-header"><tr id="e4d14221-84ee-4c91-b194-ce7f3e50ca57"><th id="s_[&gt;" class="simple-table-header-color simple-table-header"></th><th id="gJPS" class="simple-table-header-color simple-table-header">Masculine</th><th id="AtZP" class="simple-table-header-color simple-table-header">Feminine</th><th id="s^SU" class="simple-table-header-color simple-table-header">Neuter</th></tr></thead><tbody><tr id="d1e24ec7-997f-48ff-842d-296b709968cf"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Nom</th><td id="gJPS" class="">ων</td><td id="AtZP" class="">ουσα</td><td id="s^SU" class="">ον</td></tr><tr id="c67697d3-2860-474b-8cac-89b6027775db"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Gen</th><td id="gJPS" class="">οντος</td><td id="AtZP" class="">ουσης</td><td id="s^SU" class="">οντος</td></tr><tr id="efde1d82-383a-4e3a-98cc-0fcab05e9b89"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Dat</th><td id="gJPS" class="">οντι</td><td id="AtZP" class="">ουσῃ</td><td id="s^SU" class="">οντι</td></tr><tr id="3b09eb4b-8dcb-4fad-a16c-ca9f30b05dd3"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Acc</th><td id="gJPS" class="">οντα</td><td id="AtZP" class="">ουσαν</td><td id="s^SU" class="">ον</td></tr><tr id="e15008de-10cb-4c95-a606-361a1519092c"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Nom</th><td id="gJPS" class="">οντες</td><td id="AtZP" class="">ουσαι</td><td id="s^SU" class="">οντα</td></tr><tr id="3b9b0f6d-80f4-4555-b0e8-4ef1a91a22c1"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Gen</th><td id="gJPS" class="">οντων</td><td id="AtZP" class="">ουσων</td><td id="s^SU" class="">οντων</td></tr><tr id="84e73d9f-477c-4563-ba26-c5de5074ff6b"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Dat</th><td id="gJPS" class="">ουσι(ν)</td><td id="AtZP" class="">ουσαις</td><td id="s^SU" class="">ουσι(ν)</td></tr><tr id="94572c56-3bec-40fd-aeaf-f823c8cd3ceb"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Acc</th><td id="gJPS" class="">οντας</td><td id="AtZP" class="">ουσας</td><td id="s^SU" class="">οντα</td></tr></tbody></table><h3 id="68406e07-c4bf-4d72-99d7-d025eaf7a436" class="block-color-purple">Aorist Moods</h3><table id="28c76307-d333-4947-aec1-c1a974805bf8" class="simple-table"><thead class="simple-table-header"><tr id="f17f8b56-ffab-44de-afbc-5e8914babb23"><th id="s_[&gt;" class="simple-table-header-color simple-table-header"></th><th id="gJPS" class="simple-table-header-color simple-table-header">Masculine</th><th id="AtZP" class="simple-table-header-color simple-table-header">Feminine</th><th id="s^SU" class="simple-table-header-color simple-table-header">Neuter</th></tr></thead><tbody><tr id="75562389-cfd9-41d7-a465-66912f5bb87b"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Nom</th><td id="gJPS" class="">ομενος</td><td id="AtZP" class="">ομενη</td><td id="s^SU" class="">ομενον</td></tr><tr id="a0fcc03e-55a9-4204-a917-eff937517469"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Gen</th><td id="gJPS" class="">ομενοθ</td><td id="AtZP" class="">ομενης</td><td id="s^SU" class="">ομενου</td></tr><tr id="41bea641-3fb5-45a8-9f32-8b6e8171f44d"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Dat</th><td id="gJPS" class="">ομενῳ</td><td id="AtZP" class="">ομενῃ</td><td id="s^SU" class="">ομενῳ</td></tr><tr id="2aca038d-baf4-4b84-bf15-768c4dc7821b"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Acc</th><td id="gJPS" class="">ομενον</td><td id="AtZP" class="">ομενην</td><td id="s^SU" class="">ομενον</td></tr><tr id="d3b521f1-dd8c-4291-bdfc-12855630f7d4"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Nom</th><td id="gJPS" class="">ομενοι</td><td id="AtZP" class="">ομεναι</td><td id="s^SU" class="">ομενα</td></tr><tr id="ba0172d3-9474-482a-a376-cf1cbccbc68a"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Gen</th><td id="gJPS" class="">ομενων</td><td id="AtZP" class="">ομενων</td><td id="s^SU" class="">ομενων</td></tr><tr id="98cb3566-2abc-4a6e-a599-dc46b05012e6"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Dat</th><td id="gJPS" class="">ομενοις</td><td id="AtZP" class="">οπμεναις</td><td id="s^SU" class="">ομενοις</td></tr><tr id="1a9084e6-dffb-44f0-a7a2-cb34f58395ee"><th id="s_[&gt;" class="simple-table-header-color simple-table-header">Acc</th><td id="gJPS" class="">ομενους</td><td id="AtZP" class="">ομενας</td><td id="s^SU" class="">ομενα</td></tr></tbody></table><p id="7737621d-c64b-489b-b81d-41f9bba8a52f" class="">Aorist active: verbed</p><p id="face662e-42fc-48af-8bac-9cdb177a991f" class="">Aorist passive: was/were verbed</p><table id="0ce288e0-2005-4f36-bb1d-f04c88271146" class="simple-table"><thead class="simple-table-header"><tr id="7d111001-9e6f-424a-910f-06322bc76c82"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"></th><th id="RUj{" class="simple-table-header-color simple-table-header">Active (3rd pp)</th><th id="jkPq" class="simple-table-header-color simple-table-header"></th><th id="[kE@" class="simple-table-header-color simple-table-header"></th><th id="}xsQ" class="simple-table-header-color simple-table-header">Passive (6th pp)</th><th id="k\XE" class="simple-table-header-color simple-table-header"></th><th id="Mruj" class="simple-table-header-color simple-table-header"></th></tr></thead><tbody><tr id="4199edf9-c8bf-4f41-8cb2-5abe09d7660b"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>Subject</strong></th><td id="RUj{" class=""><strong>Indicative</strong></td><td id="jkPq" class=""><strong>Subjunctive</strong></td><td id="[kE@" class=""><strong>Optative</strong></td><td id="}xsQ" class=""><strong>Indicative</strong></td><td id="k\XE" class=""><strong>Subjunctive</strong></td><td id="Mruj" class=""><strong>Optative</strong></td></tr><tr id="f55b165f-df55-49b8-9f8f-d6fda77da27c"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>I</strong></th><td id="RUj{" class="">α</td><td id="jkPq" class="">ω</td><td id="[kE@" class="">αιμι</td><td id="}xsQ" class="">θην</td><td id="k\XE" class="">θω</td><td id="Mruj" class="">θειην</td></tr><tr id="fba6da19-7301-4509-9b5a-f2f9f1f3ebdf"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>You</strong></th><td id="RUj{" class="">ας</td><td id="jkPq" class="">ῃς</td><td id="[kE@" class="">ειας/αις</td><td id="}xsQ" class="">θης</td><td id="k\XE" class="">θῃς</td><td id="Mruj" class="">θειης</td></tr><tr id="4b601bce-e4e5-4307-8d7f-8a3075338dfb"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>He/she/it</strong></th><td id="RUj{" class="">ε(ν)</td><td id="jkPq" class="">ῃ</td><td id="[kE@" class="">ειεν/αι</td><td id="}xsQ" class="">θη</td><td id="k\XE" class="">θῃ</td><td id="Mruj" class="">θειη</td></tr><tr id="7674aac5-c235-49f7-88d3-9ee663320fb3"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>We</strong></th><td id="RUj{" class="">αμεν</td><td id="jkPq" class="">ωμεν</td><td id="[kE@" class="">αιμεν</td><td id="}xsQ" class="">θημεν</td><td id="k\XE" class="">θωμεν</td><td id="Mruj" class="">θειμεν</td></tr><tr id="363cfe90-21f7-4e7e-8e61-929e384018bc"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>You all</strong></th><td id="RUj{" class="">ατε</td><td id="jkPq" class="">ητε</td><td id="[kE@" class="">αιτε</td><td id="}xsQ" class="">θητε</td><td id="k\XE" class="">θητε</td><td id="Mruj" class="">ιεθτε</td></tr><tr id="bcbad63c-dd42-4eb3-9dc8-8ee9c071e1a4"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px"><strong>They</strong></th><td id="RUj{" class="">αν</td><td id="jkPq" class="">ωσιν</td><td id="[kE@" class="">ειαν/αιεν</td><td id="}xsQ" class="">θησαν</td><td id="k\XE" class="">θωσιν</td><td id="Mruj" class="">θειεν</td></tr><tr id="e63f4c38-c1fa-4aee-aa21-6acdcf63ef52"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px">Infinitive</th><td id="RUj{" class="">αι</td><td id="jkPq" class=""></td><td id="[kE@" class=""></td><td id="}xsQ" class="">θναι</td><td id="k\XE" class=""></td><td id="Mruj" class=""></td></tr><tr id="f8020d3d-816a-4b06-a502-3f783e73edec"><th id="Be&lt;V" class="simple-table-header-color simple-table-header" style="width:191px">Participle (See participle chart below)</th><td id="RUj{" class="">ας</td><td id="jkPq" class="">ασα</td><td id="[kE@" class="">αν</td><td id="}xsQ" class="">θεις</td><td id="k\XE" class="">θεισα</td><td id="Mruj" class="">θεν</td></tr></tbody></table><p id="6b7fc262-7b5e-490d-bd91-06abf8ff3765" class="">Aorist middle (3rd pp): verbed (for himself, etc)</p><table id="6fc645e7-2002-47b5-bc6a-7922e4b0fd0d" class="simple-table"><thead class="simple-table-header"><tr id="f77dc403-3ebc-485f-9cff-16f3a3c1ed9f"><th id="chkU" class="simple-table-header-color simple-table-header"></th><th id="@xUQ" class="simple-table-header-color simple-table-header">Indicative</th></tr></thead><tbody><tr id="0f665d2e-3653-4872-ad6a-222a209a56ac"><th id="chkU" class="simple-table-header-color simple-table-header">I</th><td id="@xUQ" class="">αμην</td></tr><tr id="4210a73e-8a51-4970-9bfb-8e25113cf04f"><th id="chkU" class="simple-table-header-color simple-table-header">You</th><td id="@xUQ" class="">ω</td></tr><tr id="1dbe0ff1-24d3-4c18-8ba6-9b608e692351"><th id="chkU" class="simple-table-header-color simple-table-header">He/she/it</th><td id="@xUQ" class="">ατο</td></tr><tr id="a42bcdf4-192a-4b4a-8d19-0b9eb4f7f94b"><th id="chkU" class="simple-table-header-color simple-table-header">We</th><td id="@xUQ" class="">αμεθα</td></tr><tr id="bbdcaacd-1273-4d9b-b7ad-26092b682a5e"><th id="chkU" class="simple-table-header-color simple-table-header">You all</th><td id="@xUQ" class="">ασθε</td></tr><tr id="514dfcbf-2fed-4434-bcf8-87b4efd525ea"><th id="chkU" class="simple-table-header-color simple-table-header">They</th><td id="@xUQ" class="">αντο</td></tr><tr id="d3408f55-5db9-4afb-8723-eb1a96c3058c"><th id="chkU" class="simple-table-header-color simple-table-header">Infinitive</th><td id="@xUQ" class="">ασθαι</td></tr><tr id="4f86efee-21be-43b8-be00-d463b95f843b"><th id="chkU" class="simple-table-header-color simple-table-header">Participle</th><td id="@xUQ" class="">αμενος, αμενη, ομενον</td></tr></tbody></table><h3 id="085c3a4d-a19c-4376-986b-1df3be313960" class="block-color-teal">Aorist Active + Passive Participle (Endings only)</h3><table id="c4423f76-0507-4d6d-8db9-5b288fb52ee8" class="simple-table"><thead class="simple-table-header"><tr id="4cf58442-9100-4689-8483-c0f92ff52414"><th id="zDM`" class="simple-table-header-color simple-table-header"></th><th id="bv&lt;x" class="simple-table-header-color simple-table-header">Active</th><th id="{\Q~" class="simple-table-header-color simple-table-header"></th><th id="`ZBK" class="simple-table-header-color simple-table-header"></th><th id="w]@[" class="simple-table-header-color simple-table-header">Passive</th><th id="gcnU" class="simple-table-header-color simple-table-header"></th><th id="iyBE" class="simple-table-header-color simple-table-header"></th></tr></thead><tbody><tr id="03b95982-b62f-462f-9329-e0d894abecbd"><th id="zDM`" class="simple-table-header-color simple-table-header"></th><td id="bv&lt;x" class="">Masculine</td><td id="{\Q~" class="">Feminine</td><td id="`ZBK" class="">Neuter</td><td id="w]@[" class="">Masculine</td><td id="gcnU" class="">Feminine</td><td id="iyBE" class="">Neuter</td></tr><tr id="893d8921-b17f-4751-a471-0791c45596ee"><th id="zDM`" class="simple-table-header-color simple-table-header">Nom</th><td id="bv&lt;x" class="">ας</td><td id="{\Q~" class="">ασα</td><td id="`ZBK" class="">αν</td><td id="w]@[" class="">εις</td><td id="gcnU" class="">εισα</td><td id="iyBE" class="">εν</td></tr><tr id="9143eb8b-66a3-4852-8358-bb0f40a2832a"><th id="zDM`" class="simple-table-header-color simple-table-header">Gen</th><td id="bv&lt;x" class="">αντος</td><td id="{\Q~" class="">ασης</td><td id="`ZBK" class="">αντος</td><td id="w]@[" class="">εντος</td><td id="gcnU" class="">εισης</td><td id="iyBE" class="">εντος</td></tr><tr id="56e50772-6125-437d-8728-0907c6cbc7b3"><th id="zDM`" class="simple-table-header-color simple-table-header">Dat</th><td id="bv&lt;x" class="">αντι</td><td id="{\Q~" class="">ασῃ</td><td id="`ZBK" class="">αντι</td><td id="w]@[" class="">εντι</td><td id="gcnU" class="">εισῃ</td><td id="iyBE" class="">εντι</td></tr><tr id="44fc33f4-bafe-4684-b463-7f4855c0d664"><th id="zDM`" class="simple-table-header-color simple-table-header">Acc</th><td id="bv&lt;x" class="">αντα</td><td id="{\Q~" class="">ασαν</td><td id="`ZBK" class="">αν</td><td id="w]@[" class="">εντα</td><td id="gcnU" class="">εισαν</td><td id="iyBE" class="">εν</td></tr><tr id="1eeb903f-21b0-417a-8029-10905f64ce67"><th id="zDM`" class="simple-table-header-color simple-table-header">Nom</th><td id="bv&lt;x" class="">αντες</td><td id="{\Q~" class="">ασαι</td><td id="`ZBK" class="">αντα</td><td id="w]@[" class="">εντες</td><td id="gcnU" class="">εισαι</td><td id="iyBE" class="">εντα</td></tr><tr id="d876595d-da92-44cc-8c45-335f046efb7a"><th id="zDM`" class="simple-table-header-color simple-table-header">Gen</th><td id="bv&lt;x" class="">αντων</td><td id="{\Q~" class="">ασων</td><td id="`ZBK" class="">αντων</td><td id="w]@[" class="">εντων</td><td id="gcnU" class="">εισων</td><td id="iyBE" class="">εντων</td></tr><tr id="4c4ea9ee-4ee7-4d9f-a453-849757dadf18"><th id="zDM`" class="simple-table-header-color simple-table-header">Dat</th><td id="bv&lt;x" class="">ασιν</td><td id="{\Q~" class="">ασαις</td><td id="`ZBK" class="">ασιν</td><td id="w]@[" class="">εισιν</td><td id="gcnU" class="">εισαις</td><td id="iyBE" class="">εισιν</td></tr><tr id="e6817e2a-7682-4176-b205-a3a42dfa771c"><th id="zDM`" class="simple-table-header-color simple-table-header">Acc</th><td id="bv&lt;x" class="">αντας</td><td id="{\Q~" class="">ασας</td><td id="`ZBK" class="">αντα</td><td id="w]@[" class="">εντας</td><td id="gcnU" class="">εισας</td><td id="iyBE" class="">εντα</td></tr></tbody></table></details></li></ul><h3 id="fa9e1422-dab0-4b0a-9144-b94720397e30" class=""><mark class="highlight-purple">Verb: Send (πεμπω)</mark></h3><table id="f45425e1-10e0-4274-ba8b-fc7c7beb70ea" class="simple-table"><thead class="simple-table-header"><tr id="fad4e9ed-dbe1-4d52-b17a-2e0b7a4c98a5"><th id="l[Yg" class="simple-table-header-color simple-table-header"></th><th id="J_kI" class="simple-table-header-color simple-table-header">Active</th><th id="t=]d" class="simple-table-header-color simple-table-header">Middle</th><th id="MHLv" class="simple-table-header-color simple-table-header">Passive</th></tr></thead><tbody><tr id="ffb1e4d1-4861-4436-b15a-e144481d0069"><th id="l[Yg" class="simple-table-header-color simple-table-header">Present</th><td id="J_kI" class="">She sends</td><td id="t=]d" class="">Sends for herself</td><td id="MHLv" class="">She is sent</td></tr><tr id="f29bc466-f55a-4c90-b58a-cbcbb914d8c9"><th id="l[Yg" class="simple-table-header-color simple-table-header">Imperfect</th><td id="J_kI" class="">She was sending</td><td id="t=]d" class="">Was sending for herself</td><td id="MHLv" class="">She was being sent</td></tr><tr id="e6fcce21-8a8c-4d77-80f6-bf081dde7c97"><th id="l[Yg" class="simple-table-header-color simple-table-header">Future</th><td id="J_kI" class="">She will send</td><td id="t=]d" class="">Will send for herself</td><td id="MHLv" class="">She will be sent</td></tr><tr id="1f82bd06-04e4-42db-b502-a279a569acc1"><th id="l[Yg" class="simple-table-header-color simple-table-header">Aorist</th><td id="J_kI" class="">She sent</td><td id="t=]d" class="">Sent for herself</td><td id="MHLv" class="">She was sent</td></tr><tr id="e9374118-920b-4a5a-91e0-1e2a5960231d"><th id="l[Yg" class="simple-table-header-color simple-table-header">Perfect</th><td id="J_kI" class="">She has sent</td><td id="t=]d" class="">Has sent for herself</td><td id="MHLv" class="">She has been sent</td></tr><tr id="7b671cc8-6fda-47ab-8d0c-169090131e64"><th id="l[Yg" class="simple-table-header-color simple-table-header">Pluperfect</th><td id="J_kI" class="">She had sent</td><td id="t=]d" class="">Had sent for herself</td><td id="MHLv" class="">She had been sent</td></tr><tr id="dd08fa41-1057-47b6-a725-d9c24b9cab0e"><th id="l[Yg" class="simple-table-header-color simple-table-header">Future Perfect</th><td id="J_kI" class="">She will have sent</td><td id="t=]d" class="">Will have sent for herself</td><td id="MHLv" class="">She will have been sent</td></tr></tbody></table><h3 id="8418e582-30b1-4be0-a64f-9ce26faf3c65" class="block-color-purple">Irregular verb εἰμι - to be</h3><div id="53e83739-ac96-4cb0-99f0-e7b79c3c8df5" class="column-list"><div id="cabceda4-78b2-4e49-8b2c-1f4a7fb586ec" style="width:31.25%" class="column"><table id="fbc824f8-a498-4375-bf42-a19174b4ec66" class="simple-table"><thead class="simple-table-header"><tr id="7c925683-1fe0-4e90-b0b3-73b5f597cfe1"><th id="Db&gt;W" class="simple-table-header-color simple-table-header"></th><th id="gVB_" class="simple-table-header-color simple-table-header">Present indicative</th><th id=":y?T" class="simple-table-header-color simple-table-header">Imperfect indicative</th></tr></thead><tbody><tr id="fd270c12-f756-4496-a135-7b578a2a4f03"><th id="Db&gt;W" class="simple-table-header-color simple-table-header">I</th><td id="gVB_" class="">εἰμί</td><td id=":y?T" class="">ἦν/ἦ</td></tr><tr id="458ecb0c-4c82-4493-9c03-eff6d4fd66d6"><th id="Db&gt;W" class="simple-table-header-color simple-table-header">You</th><td id="gVB_" class="">εἶ</td><td id=":y?T" class="">ἦσθα</td></tr><tr id="92f917fa-d7f0-4926-9320-bb54588d22c8"><th id="Db&gt;W" class="simple-table-header-color simple-table-header">He/she/it</th><td id="gVB_" class="">ἐστίν</td><td id=":y?T" class="">ἦν</td></tr><tr id="dc5815de-0508-4005-a54f-0b33aa5a139a"><th id="Db&gt;W" class="simple-table-header-color simple-table-header">We</th><td id="gVB_" class="">ἑσμέν</td><td id=":y?T" class="">ἦμεν</td></tr><tr id="c5d6ed15-7ae9-42b6-8380-bfcd26ee4a8a"><th id="Db&gt;W" class="simple-table-header-color simple-table-header">You all</th><td id="gVB_" class="">ἑστέ</td><td id=":y?T" class="">ἦτε</td></tr><tr id="752ed858-b2d7-495f-a561-1b3ad6a55948"><th id="Db&gt;W" class="simple-table-header-color simple-table-header">They</th><td id="gVB_" class="">εἰσίν</td><td id=":y?T" class="">ἦσαν</td></tr><tr id="52d62758-9985-4714-a986-7f5e355d90b2"><th id="Db&gt;W" class="simple-table-header-color simple-table-header">Infinitive</th><td id="gVB_" class="">εἶναι</td><td id=":y?T" class="">εἶναι</td></tr></tbody></table></div><div id="bc69a390-4700-41ea-9a84-c6597d88534a" style="width:68.75%" class="column"><p id="0ea42bac-80e4-47fa-b9ab-222ed9e03413" class="">Participles: ὤν, οὖσα, ὄν</p><p id="5e5dd07f-0904-4adb-87ee-47afc28c42a8" class="">
+</p></div></div></div></article></body></html>
